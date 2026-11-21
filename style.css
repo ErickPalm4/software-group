@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #114b6e;
+}
+
+/* Contenedor de las 3 tarjetas principales */
+.equipo-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 20px auto 50px;
+  padding: 0 20px;
+}
+
+.tarjeta-integrante {
+  background-color: #14567a;
+  color: #ffffff;
+  border: 2px solid #0d3a54;
+  border-radius: 10px;
+  width: 310px;
+  min-height: 360px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-integrante:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-integrante h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.tarjeta-integrante h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tarjeta-integrante ul {
+  padding-left: 20px;
+}
+
+/* Sección de Portafolio al deslizar hacia abajo */
+.portafolio-section {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.portafolio-section h2 {
+  text-align: center;
+  color: #114b6e;
+  margin-bottom: 25px;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.proyecto-card {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9fbfd;
+}
+
+.proyecto-card h3 {
+  color: #14567a;
+  margin-bottom: 10px;
+}
+
+.btn-repo {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: #14567a;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.btn-repo:hover {
+  background-color: #0d3a54;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
