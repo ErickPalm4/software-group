@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -10,122 +10,234 @@ html {
 }
 
 body {
-  background-color: #f4f6f9;
-  color: #222;
-  line-height: 1.6;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.5;
 }
 
-header {
+/* Encabezado */
+.encabezado {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 32px 20px 18px;
 }
 
-header h1 {
-  font-size: 2rem;
+.encabezado h1 {
+  font-size: 1.9rem;
   letter-spacing: 1px;
-  color: #114b6e;
+  color: #0f2942;
 }
 
-/* Contenedor de las 3 tarjetas principales */
-.equipo-container {
-  display: flex;
-  justify-content: center;
+.encabezado p {
+  color: #475569;
+  margin-top: 4px;
+}
+
+/* Estructura principal: 2 columnas en escritorio */
+.layout-principal {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
   gap: 24px;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 20px auto 50px;
-  padding: 0 20px;
+  max-width: 1240px;
+  margin: 16px auto 40px;
+  padding: 0 24px;
+  align-items: stretch;
 }
 
-.tarjeta-integrante {
-  background-color: #14567a;
-  color: #ffffff;
-  border: 2px solid #0d3a54;
-  border-radius: 10px;
-  width: 310px;
-  min-height: 360px;
-  padding: 25px;
+/* Columna izquierda: 3 filas apiladas */
+.equipo-columna {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fila-integrante {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Cuadro de la foto a la izquierda */
+.caja-foto {
+  background-color: #ffffff;
+  border: 2px solid #0f2942;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 175px;
+}
+
+.foto-integrante {
+  width: 100%;
+  height: 100%;
+  min-height: 175px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Cuadro de información a la derecha */
+.caja-info {
+  background-color: #ffffff;
+  border: 2px solid #0f2942;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fila-integrante:hover .caja-info {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+}
+
+.caja-info h2 {
+  font-size: 1.2rem;
+  color: #0f2942;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.caja-info p {
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.caja-info h3 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #164e78;
+  margin-bottom: 4px;
+}
+
+.caja-info ul {
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: #1e293b;
+}
+
+.caja-info li {
+  margin-bottom: 2px;
+}
+
+/* Columna derecha: Portafolio de proyectos */
+.portafolio-panel {
+  background-color: #ffffff;
+  border: 2.5px solid #0f2942;
+  border-radius: 36px;
+  padding: 26px 22px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.09);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
-}
-
-.tarjeta-integrante:hover {
-  transform: translateY(-5px);
-}
-
-.tarjeta-integrante h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 8px;
-}
-
-.tarjeta-integrante h3 {
-  margin-top: 15px;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.tarjeta-integrante ul {
-  padding-left: 20px;
-}
-
-/* Sección de Portafolio al deslizar hacia abajo */
-.portafolio-section {
-  max-width: 1100px;
-  margin: 40px auto 60px;
-  padding: 30px 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.portafolio-section h2 {
-  text-align: center;
-  color: #114b6e;
-  margin-bottom: 25px;
-}
-
-.proyectos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-.proyecto-card {
-  border: 1px solid #d0d7de;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #f9fbfd;
+.portafolio-panel > h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.6px;
+  color: #0f2942;
 }
 
-.proyecto-card h3 {
-  color: #14567a;
-  margin-bottom: 10px;
+.bloque-proyecto {
+  border: 2px solid #164e78;
+  border-radius: 10px;
+  padding: 18px;
+  background-color: #f8fafc;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bloque-proyecto h3 {
+  font-size: 1rem;
+  color: #0f2942;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.bloque-proyecto p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.bloque-proyecto ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.bloque-proyecto li {
+  margin-bottom: 6px;
+}
+
+.bloque-proyecto a {
+  color: #164e78;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bloque-proyecto a:hover {
+  text-decoration: underline;
 }
 
 .btn-repo {
   display: inline-block;
-  margin-top: 12px;
-  padding: 8px 14px;
-  background-color: #14567a;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 10px 18px;
+  background-color: #0f2942;
+  color: #ffffff !important;
+  border: 2px solid #0f2942;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .btn-repo:hover {
-  background-color: #0d3a54;
+  background-color: #164e78;
+  transform: translateY(-1px);
 }
 
-footer {
+/* Pie de página */
+.pie-pagina {
   text-align: center;
-  padding: 20px;
-  color: #666;
-  font-size: 0.9rem;
+  padding: 14px 20px 28px;
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+/* Responsivo para pantallas medianas o pequeñas */
+@media (max-width: 960px) {
+  .layout-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .portafolio-panel {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .fila-integrante {
+    grid-template-columns: 1fr;
+  }
+
+  .caja-foto {
+    max-width: 220px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

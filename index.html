@@ -8,13 +8,14 @@
 </head>
 <body>
 
-  <header>
+  <header class="encabezado">
     <h1>GRUPO DE TRABAJO</h1>
     <p>Portafolio colaborativo de habilidades y proyectos de la carrera</p>
   </header>
 
-  <!-- SECCIÓN 1: INTEGRANTES DEL EQUIPO -->
-  <section class="equipo-container">
+  <main class="layout-principal">
+    <!-- COLUMNA IZQUIERDA: 3 FILAS (FOTO + INFORMACIÓN) -->
+    <section class="equipo-columna" aria-label="Integrantes del equipo">
 
     <!-- ================= TARJETA ERICK ================= -->
     <article class="tarjeta-integrante" id="integrante-erick">
@@ -31,22 +32,20 @@
     </article>
     <!-- =============== FIN TARJETA ERICK =============== -->
 
-    <!-- ================= FILA SERGIO ================= -->
-<article class="fila-integrante" id="integrante-sergio">
-  <div class="caja-foto">
-    <img src="img/sergio.jpg" alt="Foto de Sergio Alvarado" class="foto-integrante">
-  </div>
-  <div class="caja-info">
-    <h2>Sergio Alvarado</h2>
-    <p>Estudiante de Ingeniería de Software enfocado en el desarrollo de interfaces claras, usabilidad y prototipado web/móvil.</p>
-    <h3>Habilidades</h3>
-    <ul>
-      <li>Diseño de interfaces y prototipado (Mockups)</li>
-      <li>HTML5 y CSS3 básico</li>
-      <li>Control de versiones con Git y GitHub</li>
-    </ul>
-  </div>
-</article>
+    <!-- ================= TARJETA SERGIO ================= -->
+    <article class="tarjeta-integrante" id="integrante-sergio">
+      <div>
+        <h2>Sergio Alvarado</h2>
+        <p>Estudiante de Ingeniería de Software enfocado en el desarrollo de interfaces claras, usabilidad y prototipado web/móvil.</p>
+        <h3>Habilidades</h3>
+        <ul>
+          <li>Diseño de interfaces y prototipado (Mockups)</li>
+          <li>HTML5 y CSS3 básico</li>
+          <li>Control de versiones con Git y GitHub</li>
+        </ul>
+      </div>
+    </article>
+    <!-- =============== FIN TARJETA SERGIO =============== -->
 
     <!-- ================= TARJETA LEISLER ================= -->
     <article class="tarjeta-integrante" id="integrante-leisler">
@@ -63,35 +62,31 @@
     </article>
     <!-- =============== FIN TARJETA LEISLER =============== -->
 
-  </section>
+    </section>
 
-  <!-- SECCIÓN 2: PORTAFOLIO DE PROYECTOS (AL DESLIZAR HACIA ABAJO) -->
-  <section class="portafolio-section" id="portafolio">
-    <h2>PORTAFOLIO DE PROYECTOS</h2>
+    <!-- COLUMNA DERECHA: PORTAFOLIO DE PROYECTOS -->
+    <aside class="portafolio-panel" id="portafolio">
+      <h2>PORTAFOLIO DE PROYECTOS</h2>
 
-    <div class="proyectos-grid">
-      <!-- Proyectos Personales -->
-      <div class="proyecto-card">
-        <h3>Proyectos Personales</h3>
+      <div class="bloque-proyecto">
+        <h3>PROYECTOS PERSONALES</h3>
         <p>Trabajos desarrollados de forma individual por cada integrante a lo largo de la carrera.</p>
         <ul>
           <li><strong>Erick:</strong> <!-- Enlace o nombre de proyecto personal --></li>
-          <li><strong>Sergio:</strong> <a href="https://github.com/leonelalvaradop123-rgb/Proyectos-personales-software" target="_blank" rel="noopener noreferrer">Ver Repositorio</a></li>
+          <li><strong>Sergio:</strong> <a href="https://github.com/leonelalvaradop123-rgb/Proyectos-personales-software" target="_blank">Repositorio</a> | <a href="https://leonelalvaradop123-rgb.github.io/Proyectos-personales-software/" target="_blank">Ver Prototipos (Hola Abuela / Clara Salud)</a></li>
           <li><strong>Leisler:</strong> <!-- Enlace o nombre de proyecto personal --></li>
         </ul>
       </div>
 
-      <!-- Proyectos Grupales -->
-      <div class="proyecto-card">
-        <h3>Proyectos Grupales</h3>
+      <div class="bloque-proyecto">
+        <h3>PROYECTOS GRUPALES</h3>
         <p>Repositorio colaborativo con los proyectos realizados en equipo.</p>
-        <!-- Reemplaza # con el enlace real de su repositorio de proyectos grupales -->
-        <a href="https://github.com/erickpalmasaltos/software-group" target="_blank" class="btn-repo">Ver Repositorio Grupal</a>
+        <a href="https://github.com/erickpalmasaltos/software-group" target="_blank" rel="noopener noreferrer" class="btn-repo">VER REPOSITORIO</a>
       </div>
-    </div>
-  </section>
+    </aside>
+  </main>
 
-  <footer>
+  <footer class="pie-pagina">
     <p>Examen Práctico 2 — Control de Versiones con Git y GitHub</p>
   </footer>
 
